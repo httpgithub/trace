@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 public class HelloApiProvider implements HelloApi {
     @Override
     public String sayHello(String name) {
-        return null;
+        return "HelloApiProvider hello";
     }
 }

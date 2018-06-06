@@ -1,5 +1,6 @@
 package com.may.xy.controller;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.may.xy.api.HelloApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,12 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HelloController {
-    @Autowired
+    @Reference
     private HelloApi helloApi;
 
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String sayHello() {
-        helloApi.sayHello("K");
-        return "hello";
+        return helloApi.sayHello("K");
     }
 }

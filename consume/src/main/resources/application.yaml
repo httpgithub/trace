@@ -2,3 +2,8 @@
 spring:
  application:
   name: dubbo-spring-boot-starter
+ dubbo:
+  server: true
+  registry: zookeeper://104.129.183.9:2181
+  protocol:
+   name: dubbo
