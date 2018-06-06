@@ -1,0 +1,9 @@
+# yaml 语法 https://blog.csdn.net/IT_faquir/article/details/79842885
+spring:
+ application:
+  name: dubbo-spring-boot-starter
+ dubbo:
+  server: true
+  registry: zookeeper://104.129.183.9:2181
+  protocol:
+   name: dubbo
